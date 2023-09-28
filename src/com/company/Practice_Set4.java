@@ -96,5 +96,44 @@ public class Practice_Set4 {
             }
             System.out.println();
         }
+
+        System.out.println("\n\nInverted Half Pyramid with numbers\n\n");
+
+        int w = 5;
+
+        for(int i=1; i<=5; i++){
+            for(int j=1; j<=w-i+1; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+
+        System.out.println("\n\nHalf Pyramid with numbers\n\n");
+
+        int e = 5;
+        int num = 1;
+        for(int i=1; i<=e; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(num + " ");
+                num++;
+            }
+            System.out.println();
+        }
+
+        System.out.println("\n\n0 - 1 Triangle\n\n");
+
+        int r = 5;
+        for(int i=1; i<=r; i++){
+            for(int j=1; j<=i; j++){
+                int sum = i+j;
+                if (sum % 2 == 0){
+                    System.out.print("1");
+                }else{
+                    System.out.print("0");
+                }
+            }
+            System.out.println();
+        }
+
     }
 }
