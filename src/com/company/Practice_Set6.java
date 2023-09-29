@@ -54,6 +54,43 @@ public class Practice_Set6 {
         double power = Math.pow(x1, n1); //for power
         return (int) power;
     }
+
+    //Write a function that calculates the Greatest Common Divisor of 2 numbers.
+
+    public static int GCD(int f,int g){
+        if(f>g){
+            int temp = f;
+            f = g;
+            g = temp;
+        }
+        while (g != 0) {
+            int remainder = f % g;
+            f = g;
+            g = remainder;
+        }
+
+        return f;
+    }
+
+    // Write a program to print Fibonacci series of n terms :
+    //0 1 1 2 3 5 8 13 21 .....
+    //In the Fibonacci series, a number is the sum of the previous 2 numbers that came before it.
+
+    public static void series(int n12){
+        int q1 = 0;
+        int q2 = 1;
+
+        System.out.print("Fibonacci Series (first " + n12 + " terms): ");
+
+        for(int i=0; i<=n12; i++){
+            System.out.print(q1 + " ");
+
+            int next = q1 + q2;
+            q1 = q2;
+            q2 = next;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -140,6 +177,20 @@ public class Practice_Set6 {
         int n1 = sc.nextInt();
         System.out.print("Result: ");
         System.out.println(powerOfNum(x,n));
+
+        // for GCD
+
+        System.out.println("Enter Value of f: ");
+        int f = sc.nextInt();
+        System.out.println("Enter Value of g: ");
+        int g = sc.nextInt();
+        System.out.println("Greatest Common Factor is: " + GCD(f,g));
+
+
+        // for Fibonacci Series
+
+        int n12 = 10;
+        series(n12);
 
     }
 }
